@@ -107,7 +107,8 @@ Contributions are welcome!
 ---
 
 ## 👨‍💻 Author
-- **Ankit Gupta**
+ - Ankit Gupta
+ - AIML Engineer 
 ---
 
 ## ⭐ Support
