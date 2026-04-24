@@ -35,7 +35,7 @@ def teacher_dashboard():
     with c1:
         header_dashboard()
     with c2:
-        st.subheader(f"""Welcome💻 {teacher_data['name']} """)
+        st.subheader(f"""Hello {teacher_data['username']} 👋 """)
         if st.button("Logout", type='secondary', key='loginbackbtn', shortcut="control+backspace"):
             st.session_state['is_logged_in'] = False
             del st.session_state.teacher_data 
@@ -282,16 +282,16 @@ def register_teacher(teacher_username,teacher_name,teacher_pass,teacher_pass_con
         return False,"password not matched..!"
     
     try:
-        create_teacher(teacher_username,teacher_pass,teacher_pass)
-        return True,"successfully created..! Login Now"
+        create_teacher(teacher_username,teacher_name,teacher_pass)
+        return True,"successfully created Login Now...!"
     except Exception as e: 
         return False,"unexpected error..!"
     
 # Teacher Login Page 
-def login_teacher(username,password): 
-    if not username or not password:
+def login_teacher(teacher_username,teacher_pass): 
+    if not teacher_username or not teacher_pass:
         return False
-    teacher = teacher_login(username,password)
+    teacher = teacher_login(teacher_username,teacher_pass)
     if teacher: 
         st.session_state.user_role = 'teacher'
         st.session_state.teacher_data = teacher

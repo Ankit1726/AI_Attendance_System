@@ -14,18 +14,18 @@ def check_teacher_exists(username):
     return len(response.data) > 0 
 
 # Create Teacher Data
-def create_teacher(username, password, name):
+def create_teacher(teacher_username,teacher_name,teacher_pass):
 
-    data = { "username" : username, "password": hash_pass(password), "name": name}
+    data = { "username" : teacher_username, "password": hash_pass(teacher_pass), "name": teacher_name}
     response = supabase.table("teachers").insert(data).execute()
     return response.data
 
 # check teacher login 
-def teacher_login(username, password):
-    response = supabase.table("teachers").select("*").eq("username", username).execute()
+def teacher_login(teacher_username, teacher_pass):
+    response = supabase.table("teachers").select("*").eq("username", teacher_username).execute()
     if response.data:
         teacher = response.data[0]
-        if check_pass(password, teacher['password']):
+        if check_pass(teacher_pass, teacher['password']):
             return teacher
     return None
 
