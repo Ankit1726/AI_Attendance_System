@@ -40,7 +40,7 @@ The system leverages **face recognition, voice processing, and data analytics** 
 
 * **Frontend:** Streamlit
 * **Backend:** Python
-* **AI/ML:** OpenCV, NumPy, Scikit-learn,pandas
+* **AI/ML:** OpenCV, NumPy, Scikit-learn ,pandas
 * **Database:** Supabase
 * **Deployment:** Streamlit Cloud
 
@@ -82,7 +82,6 @@ smartclass-ai/
 │   ├── pipelines/
 │   ├── database/
 │   └── ui/
-│── models/
 │── screenshots/
 │── requirements.txt
 │── README.md
