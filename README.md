@@ -66,10 +66,6 @@ The system leverages **face recognition, voice processing, and data analytics** 
 
 ![Teacher Dashboard](teacher.png)
 
-### 🔹 Student Dashboard
-
-![Teacher Dashboard](student.png)
-
 ---
 
 ## 📂 Project Structure
